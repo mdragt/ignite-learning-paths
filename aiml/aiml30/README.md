@@ -95,6 +95,25 @@ Once you have created the base Azure Machine Learning Service Workspace we need 
 * Click `Test` and to see how it performs on a scored data item.
 * Click `Consume` and show the sample code provided for integrating the web service.
 
+### 5. Testing API with C# console app (dotnet core)
+
+1. [Download VS Code here](https://code.visualstudio.com/download)
+2. Clone the app with the following command
+    * `git clone https://github.com/microsoft/ignite-learning-paths.git`
+3. Navigate to project path
+    * `cd ignite-learning-paths\aiml\aiml30\C#\IgniteAimlDataApp`
+4. Open the project in VS Code
+    * `code .`
+5. Replace the local dataset with the downloaded dataset from the step above in the `IgniteAimlDataApp/Datasets` Folder.
+6. To run the test
+    * Copy the API key from the `Consume` tab
+    * Open the `App.config` and paste it in the value attribute
+    * Copy the `Request-Response Url` from the `Consume` tab
+    * Open the `Program.cs` and paste the value in  `client.BaseAddress = new Uri("");`
+    * Right click `Program.cs` and select `Open in Terminal`
+    * Type the command `dotnet run` to run the console app
+    * To use the default values of StoreID (ID1) of 2 and ItemID    (ID2) of 1 and the number of weeks to predict. Just type `y`
+    * This will run and should return the predicted values for the  next 4 weeks.
 
 ## Delivery assets
 
@@ -107,8 +126,9 @@ The following asset can be used for delivering this talk:
 
 Here is a list of related training and documentation.
 
-- [Design for availability and recoverability in Azure](https://docs.microsoft.com/en-us/learn/modules/design-for-availability-and-recoverability-in-azure/)
-- [Create a build pipeline](https://docs.microsoft.com/en-us/learn/modules/create-a-build-pipeline/)
+- [What is the visual interface for Azure Machine Learning?](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-concept-visual-interface?WT.mc_id=msignitethetour-slides-cxa)
+- [Publish a Machine Learning Experiment with Microsoft Azure Machine Learning](https://docs.microsoft.com/en-us/learn/paths/publish-experiment-with-ml-studio/)
+
 
 ## Feedback loop
 
